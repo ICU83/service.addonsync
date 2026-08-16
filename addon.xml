@@ -1,78 +1,38 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><!--
-SPDX-FileCopyrightText: © 2016-2018 Rob Webset
-SPDX-FileCopyrightText: © 2019 Robert Hudson
-SPDX-FileCopyrightText:  2020-2021 Peter J. Mello <admin@petermello.net>
-
-SPDX-License-Identifier: MPL-2.0
-
-See LICENSES/MPL-2.0.txt for more information.
--->
-<addon id="service.addonsync" name="AddonSync" version="101.0.2"
-    provider-name="RogueScholar">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="service.addonsync" name="AddonSync" version="102.0.2" provider-name="ICU83 / RogueScholar">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
-    <import addon="script.module.defusedxml" version="0.6.0" />
-    <import addon="script.module.simplejson" version="3.17.0" />
   </requires>
-  <extension point="xbmc.service" library="resources/lib/service.py" />
-  <extension point="xbmc.python.script" library="resources/lib/addonsync.py">
+  <extension point="xbmc.service" library="service.py" />
+  <extension point="xbmc.python.script" library="default.py">
     <provides>executable</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en_US">
-      Synchronize add-on settings across installations
-    </summary>
-    <summary lang="pt_PT">
-      Sincronizar as definições dos extensões nas instalações
-    </summary>
-    <description lang="en_US">
-      Synchronize your add-on settings across all of your Kodi installations
-    </description>
-    <description lang="pt_PT">
-      Sincronizar as definições dos seus extensões em todas as suas instalações
-      do Kodi
-    </description>
-    <news>
-      v101.0.2 (2021-10-02)
-      - Remove deprecated Python 2 syntax elements
-      - Tighten exception handling Classes
-      v101.0.1 (2021-09-28)
-      - Upgrade settings.xml to new format
-      v101.0.0 (2021-07-21)
-      - Updated AddonSync to function on Kodi 19.0 "Matrix" and above
-      v100.3.0 (2019-04-24)
-      - Remove URepo link
-      v100.2.0 (2018-06-01)
-      - Final update
-      v100.1.1 (2016-12-09)
-      - Update with support for URepo
-      v100.1.0 (2016-11-22)
-      - Add option to ignore addon versions for resync
-      v1.0.2 (2016-08-19)
-      - Deliver updates through robwebset repository
-      v1.0.1 (2016-05-05)
-      - Change auto-check interval into hours rather than minutes
-      v1.0.0 (2016-04-19)
-      - Initial release
-    </news>
+    <summary lang="en_GB">Synchronize add-on settings between Kodi installations</summary>
+    <summary lang="de_DE">Addon-Einstellungen zwischen Kodi-Installationen synchronisieren</summary>
+    <description lang="en_GB">Modernized AddonSync service for Kodi 19+ with Kodi VFS network support, verified SHA-256 manifests and safer synchronization.</description>
+    <description lang="de_DE">Modernisierte AddonSync-Version für Kodi 19+ mit Kodi-VFS-Netzwerkzugriff, verifizierten SHA-256-Manifesten und sichererer Synchronisierung.</description>
     <platform>all</platform>
-    <language>en pt</language>
-      <license>MPL-2.0</license>
-      <forum></forum>
-    <website>https://github.com/RogueScholar/service.addonsync/wiki</website>
-    <source>https://github.com/RogueScholar/service.addonsync</source>
-    <lifecyclestate type="normal" lang="en_US">
-      Updated for Matrix
-    </lifecyclestate>
-    <assets>
-      <banner>resources/banner.png</banner>
-      <clearlogo>resources/clearlogo.png</clearlogo>
-      <fanart>resources/fanart.png</fanart>
-      <icon>resources/icon.png</icon>
-      <screenshot>resources/screenshot-01.png</screenshot>
-      <screenshot>resources/screenshot-02.png</screenshot>
-      <screenshot>resources/screenshot-03.png</screenshot>
-    </assets>
-    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <language>en de</language>
+    <license>MPL-2.0</license>
+    <source>https://github.com/ICU83/service.addonsync</source>
+    <news>
+      v102.0.2
+      - Pointed add-on source and support metadata to the ICU83 maintained fork
+      - Updated maintainer attribution for the modernized 102.x line
+
+      v102.0.1
+      - Fixed Kodi settings-dialog localization / blank labels
+      - Normalized language PO files and added en_US fallback
+
+      v102.0.0
+      - Reworked service/manual entry points for Python 3
+      - Replaced broken copy and hash logic
+      - Added VFS-safe recursive hashing and copying for local/SMB/NFS paths
+      - Added JSON SHA-256 manifest with legacy hashdata.xml fallback
+      - Added verified temporary copies before replacing client settings
+      - Fixed manual sync and filter actions
+      - Preserved existing AddonSync setting IDs for in-place upgrades
+    </news>
   </extension>
 </addon>

@@ -1,127 +1,138 @@
 # Kodi Media Center language file
-# SPDX-FileCopyrightText: © 2016 Rob Webset
-# SPDX-FileCopyrightText:  2020-2021 Peter J. Mello <admin@petermello.net>
-#
-# SPDX-License-Identifier: MPL-2.0
-#
 # Addon Name: AddonSync
 # Addon id: service.addonsync
-# Addon Provider: RogueScholar
+# Addon Provider: ICU83 / RogueScholar
 
 msgid ""
 msgstr ""
-"Project-Id-Version: KODI Addons\n"
-"Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
-"POT-Creation-Date: 2016-11-22 05:36-0800\n"
-"PO-Revision-Date: 2021-09-28 16:00-0700\n"
-"Last-Translator: https://github.com/RogueScholar\n"
-"Language-Team: English (United Kingdom) (https://kodi.weblate.cloud/languages/en_gb/)\n"
+"Project-Id-Version: AddonSync 102.0.2\n"
+"Report-Msgid-Bugs-To: https://github.com/ICU83/service.addonsync/issues\n"
+"POT-Creation-Date: 2026-08-16 00:00+0000\n"
+"PO-Revision-Date: 2026-08-16 00:00+0000\n"
+"Last-Translator: AddonSync maintainers\n"
+"Language-Team: English (United Kingdom)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: en_GB\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgctxt "Addon Summary"
-msgid "Synchronise Add-on Settings Between Instances"
-msgstr ""
-
-msgctxt "Addon Description"
-msgid "Keep all Add-on settings synchronised across your Kodi installations"
-msgstr ""
-
-msgctxt "#32001"
+msgctxt "#32000"
 msgid "AddonSync"
 msgstr ""
 
+msgctxt "#32001"
+msgid "General"
+msgstr ""
+
 msgctxt "#32002"
-msgid "Debugging"
+msgid "Installation role"
 msgstr ""
 
 msgctxt "#32003"
-msgid "Enable debug logging"
-msgstr ""
-
-msgctxt "#32004"
-msgid "Central Store Location"
-msgstr ""
-
-msgctxt "#32005"
-msgid "WARNING: This add-on will (depending on its configuration) do one of two things: make a copy of your settings to share from a network store OR restore your settings from that store, overwriting the current values. Please ensure that this behavior is what you are interested in."
-msgstr ""
-
-msgctxt "#32006"
-msgid "AddonSync Not Configured"
-msgstr ""
-
-msgctxt "#32007"
-msgid "Synchronisation Role"
-msgstr ""
-
-msgctxt "#32008"
 msgid "Master"
 msgstr ""
 
+msgctxt "#32004"
+msgid "Client"
+msgstr ""
+
+msgctxt "#32005"
+msgid "Central storage location"
+msgstr ""
+
+msgctxt "#32006"
+msgid "Synchronize when Kodi starts"
+msgstr ""
+
+msgctxt "#32007"
+msgid "Repeat interval in hours (0 = once)"
+msgstr ""
+
+msgctxt "#32008"
+msgid "Restart updated service add-ons"
+msgstr ""
+
 msgctxt "#32009"
-msgid "Slave"
+msgid "Logging"
 msgstr ""
 
 msgctxt "#32010"
-msgid "Update Interval in hours (0 = at startup only)"
+msgid "Enable debug logging"
 msgstr ""
 
 msgctxt "#32011"
-msgid "No Add-ons Available"
+msgid "Actions"
 msgstr ""
 
 msgctxt "#32012"
-msgid "Filter"
+msgid "Synchronize now"
 msgstr ""
 
 msgctxt "#32013"
-msgid "All"
+msgid "Filters"
 msgstr ""
 
 msgctxt "#32014"
-msgid "Select Included"
+msgid "Require matching add-on versions"
 msgstr ""
 
 msgctxt "#32015"
-msgid "Select Excluded"
+msgid "Filter mode"
 msgstr ""
 
 msgctxt "#32016"
-msgid "Add-on Synchronise Selection"
+msgid "All add-ons"
 msgstr ""
 
 msgctxt "#32017"
-msgid "Select Add-ons"
+msgid "Include selected add-ons only"
 msgstr ""
 
 msgctxt "#32018"
-msgid "Run on Startup"
+msgid "Exclude selected add-ons"
 msgstr ""
 
 msgctxt "#32019"
-msgid "Starting Synchronisation..."
+msgid "Select add-ons"
 msgstr ""
 
 msgctxt "#32020"
-msgid "Synchronisation Complete"
+msgid "First use"
 msgstr ""
 
-msgctxt "#32021"
-msgid "Operations"
+msgctxt "#32030"
+msgid "Synchronization started"
 msgstr ""
 
-msgctxt "#32022"
-msgid "Run Synchronisation Now"
+msgctxt "#32031"
+msgid "Synchronization completed"
 msgstr ""
 
-msgctxt "#32023"
-msgid "Restart Updated Service Add-ons"
+msgctxt "#32032"
+msgid "No central storage location is configured"
 msgstr ""
 
-msgctxt "#32024"
-msgid "Only Synchronise If Add-on Version Matches"
+msgctxt "#32033"
+msgid "Synchronization failed. See the Kodi log for details."
+msgstr ""
+
+msgctxt "#32034"
+msgid "No AddonSync manifest was found in central storage"
+msgstr ""
+
+msgctxt "#32035"
+msgid "Another AddonSync synchronization is already running"
+msgstr ""
+
+msgctxt "#32036"
+msgid "No selectable add-ons were found"
+msgstr ""
+
+msgctxt "#32037"
+msgid "Choose Include or Exclude as the filter mode first"
+msgstr ""
+
+msgctxt "#32038"
+msgid "Add-on filter saved"
 msgstr ""
