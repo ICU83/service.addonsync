@@ -1,12 +1,13 @@
 # AddonSync — modernized fork
 
-AddonSync synchronizes Kodi add-on settings from one designated **Master** installation to one or more **Clients** through a shared storage location.
+AddonSync synchronizes selected Kodi add-on folders from one designated **Master** installation to one or more **Clients** through a shared storage location. Version 102.2.x can synchronize add-on data, user-installed add-on program files, Kodi configuration, playlists and profiles as independently selectable scopes.
 
 This repository contains the modernized **102.x** line. It keeps the original Kodi add-on id, `service.addonsync`, while replacing synchronization code that no longer behaved correctly on Python 3/current Kodi installations.
 
-**Maintained fork:** https://github.com/ICU83/service.addonsync
+> **Fork status:** community modernization of the original project. This repository is not an official release from the upstream maintainer unless your fork is later merged upstream.
 
-> This is a community-maintained modernization of the original AddonSync project. It is not an official upstream release.
+
+AddonSync can show a native Kodi background progress notification while synchronization is running, including the active scope, current add-on, progress, and a final summary. This can be disabled in the add-on settings.
 
 ## Compatibility target
 
@@ -28,17 +29,36 @@ The manifest still declares `xbmc.python >= 3.0.0`, so the add-on may load on Ko
 - Working root-level service/manual entry points.
 - Working manual sync/filter actions.
 - Kodi-compatible language catalogs, including German, English (UK) and English (US).
+- Selectable synchronization scopes: add-on data, installed add-ons, Config, Playlists and Profiles.
+- Master-to-Client deployment/update of user-installed add-on folders.
+- Verified folder snapshots for Config, Playlists and Profiles with Client rollback.
 
 See [`CHANGELOG.md`](CHANGELOG.md) for the detailed list.
+
+## Synchronization folders
+
+The **Synchronization folders** page lets each Kodi installation choose which scopes it participates in:
+
+- **Add-on data** — `special://profile/addon_data/<addon-id>` (enabled by default).
+- **Installed add-on files** — `special://home/addons/<addon-id>` (disabled by default).
+- **Config** — portable files from `special://masterprofile` plus `keymaps` and `library`; databases, thumbnails, playlists, profiles and add-on data are excluded (disabled by default).
+- **Playlists** — `special://profile/playlists` for the active profile (disabled by default).
+- **Profiles** — `special://masterprofile/profiles` together with `profiles.xml` (disabled by default).
+
+The existing Include/Exclude add-on filter applies only to the two add-on scopes. Add-on files are synchronized before add-on data so a missing add-on can be copied to a Client and receive its data in the same pass. Config, Playlists and Profiles are whole-folder scopes and do not use the add-on filter.
 
 ## Safety model
 
 AddonSync intentionally uses a **single-source-of-truth** model:
 
-- **Master:** publishes add-on settings to the central store.
-- **Client:** mirrors matching settings from the Master.
+- **Master:** publishes the selected folders to the central store.
+- **Client:** copies matching Master content into its selected local folders.
 
-There is no conflict resolution. A Client can have local settings replaced by the Master's copy. Back up Kodi's `userdata/addon_data` directory before first rollout.
+There is no conflict resolution. A Client can have local content replaced by the Master's copy. Back up Kodi before enabling Config or Profiles synchronization. Client content in selected scopes is replaced by the Master snapshot.
+
+Add-on program files may contain platform-specific/native components. Only enable **Installed add-on files** between compatible Kodi installations (for example the same OS/CPU/Kodi generation). Kodi should be restarted after add-on program files change.
+
+AddonSync never synchronizes its own `service.addonsync` program folder. The historical safety exclusions for metadata, repositories, language resources and skins are also retained.
 
 ## Installation in Kodi
 
@@ -48,7 +68,9 @@ There is no conflict resolution. A Client can have local settings replaced by th
 2. In Kodi open **Add-ons → Install from zip file**.
 3. Select the ZIP.
 4. Open AddonSync settings and configure the role and central storage path.
-5. Test with one Master and one Client before enabling it everywhere.
+5. Under **Synchronization folders**, choose any combination of **Add-on data**, **Installed add-on files**, **Config**, **Playlists** and **Profiles**.
+6. Configure the Include/Exclude filter if only selected add-ons should be synchronized.
+7. Test with one Master and one Client before enabling it everywhere.
 
 ### Upgrade from an older AddonSync
 
@@ -95,13 +117,11 @@ service.addonsync/
 └── README.md
 ```
 
-## Repository
+## Fork setup
 
-Maintained fork: https://github.com/ICU83/service.addonsync
+After copying these files into your GitHub fork, update the `<source>` URL in `addon.xml` from the upstream repository to your own fork URL. Keep the upstream link in [`NOTICE.md`](NOTICE.md) for attribution.
 
-Issue tracker: https://github.com/ICU83/service.addonsync/issues
-
-Upstream attribution is preserved in [`NOTICE.md`](NOTICE.md). A suggested logical commit sequence for applying the modernization on top of the existing fork history is documented in [`docs/COMMIT_PLAN.md`](docs/COMMIT_PLAN.md).
+A suggested logical commit sequence is documented in [`docs/COMMIT_PLAN.md`](docs/COMMIT_PLAN.md).
 
 ## License
 

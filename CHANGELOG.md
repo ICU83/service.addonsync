@@ -4,13 +4,45 @@ All notable changes to this fork are documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Version numbers follow the existing AddonSync numbering scheme.
 
-## [102.0.2] - 2026-08-16
+## 102.2.0 - 2026-08-16
+
+- Added separately selectable **Config**, **Playlists** and **Profiles** synchronization scopes.
+- Config synchronizes portable master-profile configuration files plus `keymaps` and `library`; Kodi databases, thumbnails and the separately selectable add-on/playlists/profiles payloads are excluded.
+- Playlists synchronizes the active profile's `playlists` directory.
+- Profiles synchronizes both `profiles.xml` and the `profiles/` directory.
+- Folder scopes use staged SHA-256 snapshots, verified central copies, Client backups and rollback on verification failure.
+- Manifest schema is now version 4 while schema 1-3 data remains readable.
+- Config/Profile changes recommend a Kodi restart.
+
+## 102.1.1 - 2026-08-16
+
+- Added native Kodi `DialogProgressBG` synchronization status.
+- Shows active scope, current add-on and approximate progress during Master and Client synchronization.
+- Final notification includes updated, already-current and skipped counts.
+- Added `Show synchronization status` setting, enabled by default.
+
+## [102.1.0] - 2026-08-16
+
+### Added
+
+- Added a **Synchronization folders** settings page.
+- Added independent switches for `userdata/addon_data` and installed add-on program files.
+- Added Master-to-Client synchronization of user-installed add-ons from `special://home/addons`.
+- Added support for copying an add-on that is missing on a Client; its `addon_data` can follow in the same synchronization pass.
+- Added a restart recommendation when Client add-on program files changed.
 
 ### Changed
 
-- Pointed the Kodi add-on source metadata to the maintained fork at `ICU83/service.addonsync`.
-- Updated provider and localization support metadata for the ICU83-maintained 102.x line.
-- Documented the fork repository and upstream attribution explicitly.
+- Manifest schema is now version 3 with separate `addon_data` and `addons` scopes.
+- The existing add-on include/exclude filter applies to both synchronization scopes.
+- Disabled but installed add-ons are now visible to synchronization/filter discovery.
+- 102.0.x JSON manifests and older `hashdata.xml` stores remain readable for migration.
+
+### Safety
+
+- Add-on file synchronization is **disabled by default** and must be explicitly enabled.
+- `service.addonsync` itself and the existing safety-excluded add-on classes are not copied.
+- Add-on program files can be platform-specific; use this feature only between compatible Kodi installations and restart Kodi after code changes.
 
 ## [102.0.1] - 2026-08-16
 

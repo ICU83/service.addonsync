@@ -1,0 +1,32 @@
+name: Validate AddonSync
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Validate repository
+        run: python tests/validate_repo.py
+
+      - name: Test selectable synchronization scopes
+        run: python tests/test_sync_scopes.py
+
+      - name: Build Kodi ZIP
+        run: python scripts/build_zip.py
+
+      - name: Show package contents
+        run: unzip -l dist/service.addonsync-*.zip

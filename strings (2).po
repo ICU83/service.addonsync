@@ -1,0 +1,254 @@
+# Kodi Media Center language file
+# Addon Name: AddonSync
+# Addon id: service.addonsync
+# Addon Provider: ICU83 / RogueScholar
+
+msgid ""
+msgstr ""
+"Project-Id-Version: AddonSync 102.2.0\n"
+"Report-Msgid-Bugs-To: https://github.com/ICU83/service.addonsync/issues\n"
+"POT-Creation-Date: 2026-08-16 00:00+0000\n"
+"PO-Revision-Date: 2026-08-16 00:00+0000\n"
+"Last-Translator: AddonSync maintainers\n"
+"Language-Team: English (United States)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#32000"
+msgid "AddonSync"
+msgstr "AddonSync"
+
+msgctxt "#32001"
+msgid "General"
+msgstr "General"
+
+msgctxt "#32002"
+msgid "Installation role"
+msgstr "Installation role"
+
+msgctxt "#32003"
+msgid "Master"
+msgstr "Master"
+
+msgctxt "#32004"
+msgid "Client"
+msgstr "Client"
+
+msgctxt "#32005"
+msgid "Central storage location"
+msgstr "Central storage location"
+
+msgctxt "#32006"
+msgid "Synchronize when Kodi starts"
+msgstr "Synchronize when Kodi starts"
+
+msgctxt "#32007"
+msgid "Repeat interval in hours (0 = once)"
+msgstr "Repeat interval in hours (0 = once)"
+
+msgctxt "#32008"
+msgid "Restart updated service add-ons"
+msgstr "Restart updated service add-ons"
+
+msgctxt "#32009"
+msgid "Logging"
+msgstr "Logging"
+
+msgctxt "#32010"
+msgid "Enable debug logging"
+msgstr "Enable debug logging"
+
+msgctxt "#32011"
+msgid "Actions"
+msgstr "Actions"
+
+msgctxt "#32012"
+msgid "Synchronize now"
+msgstr "Synchronize now"
+
+msgctxt "#32013"
+msgid "Filters"
+msgstr "Filters"
+
+msgctxt "#32014"
+msgid "Require matching add-on versions"
+msgstr "Require matching add-on versions"
+
+msgctxt "#32015"
+msgid "Filter mode"
+msgstr "Filter mode"
+
+msgctxt "#32016"
+msgid "All add-ons"
+msgstr "All add-ons"
+
+msgctxt "#32017"
+msgid "Include selected add-ons only"
+msgstr "Include selected add-ons only"
+
+msgctxt "#32018"
+msgid "Exclude selected add-ons"
+msgstr "Exclude selected add-ons"
+
+msgctxt "#32019"
+msgid "Select add-ons"
+msgstr "Select add-ons"
+
+msgctxt "#32020"
+msgid "First use"
+msgstr "First use"
+
+msgctxt "#32021"
+msgid "Synchronization folders"
+msgstr ""
+
+msgctxt "#32022"
+msgid "Synchronize add-on data"
+msgstr ""
+
+msgctxt "#32023"
+msgid "Synchronize installed add-on files"
+msgstr ""
+
+msgctxt "#32024"
+msgid "Synchronizes per-add-on settings and data from userdata/addon_data."
+msgstr ""
+
+msgctxt "#32025"
+msgid "Copies user-installed add-on program files. Enable only between compatible Kodi systems. A Kodi restart is recommended after changes."
+msgstr ""
+
+msgctxt "#32030"
+msgid "Synchronization started"
+msgstr "Synchronization started"
+
+msgctxt "#32031"
+msgid "Synchronization completed"
+msgstr "Synchronization completed"
+
+msgctxt "#32032"
+msgid "No central storage location is configured"
+msgstr "No central storage location is configured"
+
+msgctxt "#32033"
+msgid "Synchronization failed. See the Kodi log for details."
+msgstr "Synchronization failed. See the Kodi log for details."
+
+msgctxt "#32034"
+msgid "No AddonSync manifest was found in central storage"
+msgstr "No AddonSync manifest was found in central storage"
+
+msgctxt "#32035"
+msgid "Another AddonSync synchronization is already running"
+msgstr "Another AddonSync synchronization is already running"
+
+msgctxt "#32036"
+msgid "No selectable add-ons were found"
+msgstr "No selectable add-ons were found"
+
+msgctxt "#32037"
+msgid "Choose Include or Exclude as the filter mode first"
+msgstr "Choose Include or Exclude as the filter mode first"
+
+msgctxt "#32038"
+msgid "Add-on filter saved"
+msgstr "Add-on filter saved"
+
+msgctxt "#32039"
+msgid "Select at least one synchronization folder"
+msgstr ""
+
+msgctxt "#32040"
+msgid "Add-on files changed. Restart Kodi to load them cleanly."
+msgstr ""
+
+msgctxt "#32026"
+msgid "Show synchronization status"
+msgstr "Show synchronization status"
+
+msgctxt "#32027"
+msgid "Shows a Kodi background progress notification while synchronization is running."
+msgstr "Shows a Kodi background progress notification while synchronization is running."
+
+msgctxt "#32041"
+msgid "Preparing synchronization"
+msgstr "Preparing synchronization"
+
+msgctxt "#32042"
+msgid "Master: checking {scope}"
+msgstr "Master: checking {scope}"
+
+msgctxt "#32043"
+msgid "Client: checking {scope}"
+msgstr "Client: checking {scope}"
+
+msgctxt "#32044"
+msgid "{scope}: {current}/{total} - {addon}"
+msgstr "{scope}: {current}/{total} - {addon}"
+
+msgctxt "#32045"
+msgid "{scope}: updating {addon}"
+msgstr "{scope}: updating {addon}"
+
+msgctxt "#32046"
+msgid "Writing synchronization manifest"
+msgstr "Writing synchronization manifest"
+
+msgctxt "#32047"
+msgid "Updated: {updated} | Current: {current} | Skipped: {skipped}"
+msgstr "Updated: {updated} | Current: {current} | Skipped: {skipped}"
+
+msgctxt "#32048"
+msgid "Reading synchronization manifest"
+msgstr "Reading synchronization manifest"
+
+msgctxt "#32049"
+msgid "Synchronization failed - {errors} error(s) - {summary}"
+msgstr "Synchronization failed - {errors} error(s) - {summary}"
+
+msgctxt "#32050"
+msgid "Synchronization complete - {summary}"
+msgstr "Synchronization complete - {summary}"
+
+msgctxt "#32053"
+msgid "Add-on data"
+msgstr "Add-on data"
+
+msgctxt "#32054"
+msgid "Add-on files"
+msgstr "Add-on files"
+
+msgctxt "#32055"
+msgid "Config"
+msgstr "Config"
+
+msgctxt "#32056"
+msgid "Playlists"
+msgstr "Playlists"
+
+msgctxt "#32057"
+msgid "Profiles"
+msgstr "Profiles"
+
+msgctxt "#32058"
+msgid "Synchronizes Kodi configuration files plus keymaps and library nodes from the master profile. Databases and thumbnail caches are excluded."
+msgstr "Synchronizes Kodi configuration files plus keymaps and library nodes from the master profile. Databases and thumbnail caches are excluded."
+
+msgctxt "#32059"
+msgid "Synchronizes music, video and mixed playlists of the active Kodi profile."
+msgstr "Synchronizes music, video and mixed playlists of the active Kodi profile."
+
+msgctxt "#32060"
+msgid "Synchronizes additional Kodi profiles and profiles.xml from the master profile directory. A Kodi restart is recommended after changes."
+msgstr "Synchronizes additional Kodi profiles and profiles.xml from the master profile directory. A Kodi restart is recommended after changes."
+
+msgctxt "#32061"
+msgid "{scope}: synchronizing"
+msgstr "{scope}: synchronizing"
+
+msgctxt "#32062"
+msgid "Kodi configuration or profiles changed. Restart Kodi to load them cleanly."
+msgstr "Kodi configuration or profiles changed. Restart Kodi to load them cleanly."

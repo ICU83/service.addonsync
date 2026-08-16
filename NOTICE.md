@@ -2,11 +2,6 @@
 
 This repository is a modernized derivative of **AddonSync** (`service.addonsync`).
 
-Maintained fork:
-
-- Repository: https://github.com/ICU83/service.addonsync
-- 102.x modernization maintainer: ICU83
-
 Upstream project:
 
 - Repository: https://github.com/RogueScholar/service.addonsync
